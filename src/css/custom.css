@@ -111,3 +111,23 @@ code {
 .markdown tbody tr:nth-child(2n) {
   background: #0f1825;
 }
+
+/* --- Headings: Space Grotesque Semi-Bold --- */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesque:wght@600&display=swap');
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6,
+.theme-doc-markdown h1,
+.theme-doc-markdown h2,
+.theme-doc-markdown h3,
+.theme-doc-markdown h4,
+.theme-doc-markdown h5,
+.theme-doc-markdown h6 {
+  font-family: 'Space Grotesque', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+}
