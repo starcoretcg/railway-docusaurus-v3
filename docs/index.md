@@ -4,7 +4,6 @@ title: Welcome
 slug: /
 ---
 
-# Welcome
+# Welcome&#x20;
 
-Docs are served from the site root (GitBook-style).  
-Use the sidebar to navigate.
+Welcome to Starcore!
