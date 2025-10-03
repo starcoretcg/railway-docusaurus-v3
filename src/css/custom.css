@@ -1,30 +1,113 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+/* --- GitBook-ish Dark for Docusaurus --- */
+/* Font: Inter (GitBook uses Inter) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  /* Accent (GitBook leans cyan/teal on dark) */
+  --ifm-color-primary: #22d3ee;   /* cyan-400 */
+  --ifm-color-primary-dark: #06b6d4;   /* cyan-500 */
+  --ifm-color-primary-darker: #0891b2; /* cyan-600 */
+  --ifm-color-primary-light: #67e8f9;  /* cyan-300 */
+  --ifm-color-primary-lighter: #a5f3fc;/* cyan-200 */
+
+  /* Code & outlines */
+  --ifm-code-font-size: 0.9rem;
+  --ifm-global-radius: 10px;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+/* Dark surface palette close to GitBook */
+html[data-theme='dark'] {
+  --ifm-background-color: #0b121b;        /* page canvas */
+  --ifm-background-surface-color: #0e1623;/* cards/surfaces */
+  --ifm-navbar-background-color: #0b121b;
+  --ifm-footer-background-color: #0b121b;
+
+  --ifm-color-emphasis-100: #1a2432;
+  --ifm-color-emphasis-200: #1f2a3a;
+  --ifm-color-emphasis-300: #243245;
+  --ifm-color-emphasis-400: #2a3a51;
+
+  --ifm-color-content: #e6eaf0;   /* main text */
+  --ifm-heading-color: #f1f5f9;
+  --ifm-link-color: var(--ifm-color-primary);
+
+  --docusaurus-highlighted-code-line-bg: rgba(103, 232, 249, 0.08);
+}
+
+/* Sidebar: muted dark like GitBook */
+.theme-doc-sidebar-container {
+  border-right: 1px solid #1f2a3a;
+  background: #0b121b;
+}
+.theme-doc-sidebar-item-link, .menu__link {
+  color: #c9d4e3;
+}
+.menu__link--active, .menu__link:hover {
+  color: #ffffff;
+  background: #111a27;
+}
+
+/* Right-hand TOC */
+.table-of-contents {
+  border-left: 1px solid #1f2a3a;
+}
+.table-of-contents a {
+  color: #9fb2cd;
+}
+.table-of-contents__link--active {
+  color: #e6eaf0;
+}
+
+/* Code blocks */
+.theme-code-block, pre code {
+  background: #0e1623 !important;
+  border: 1px solid #1f2a3a;
+}
+code {
+  background: #0e1623;
+  border-radius: 6px;
+  padding: 0.08rem 0.35rem;
+}
+
+/* Cards / callouts */
+.alert {
+  background: #0e1623;
+  border: 1px solid #1f2a3a;
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: none;
+  border-bottom: 1px solid #1f2a3a;
+}
+
+/* Links & buttons */
+.button--primary {
+  color: #001017;
+}
+
+/* Headings */
+.markdown h1, .markdown h2, .markdown h3 {
+  letter-spacing: 0.1px;
+}
+.markdown h1 { font-weight: 700; }
+.markdown h2 { font-weight: 600; }
+
+/* Images in content: subtle radius like GitBook */
+.markdown img {
+  border-radius: 10px;
+}
+
+/* Tables */
+.markdown table {
+  border-color: #1f2a3a;
+}
+.markdown thead th {
+  background: #111a27;
+  color: #dce6f4;
+}
+.markdown tbody tr:nth-child(2n) {
+  background: #0f1825;
 }
