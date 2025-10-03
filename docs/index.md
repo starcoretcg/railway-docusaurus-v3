@@ -6,5 +6,5 @@ slug: /
 
 # Welcome
 
-This site is now GitBook-style: docs are served from the root.
+Docs are served from the site root (GitBook-style).  
 Use the sidebar to navigate.
